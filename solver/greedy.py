@@ -1,4 +1,12 @@
 def solve_greedy(jobs,machines,use_lpt=False):
+    if machines <= 0:
+        raise ValueError("machines must be positive")
+    if not jobs:
+        return {
+            "assignment": [[] for _ in range(machines)],
+            "makespan": 0,
+            "loads": [0] * machines
+        }
     # 初始化每台机器
     if use_lpt:
         jobs = sorted(jobs, reverse = True)
