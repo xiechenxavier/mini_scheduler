@@ -7,7 +7,8 @@ def solve_ortools_makespan(jobs,machines):
         return {
             "assignment": [[] for _ in range(machines)],
             "makespan": 0,
-            "loads": [0] * machines
+            "loads": [0] * machines,
+            "status": "optimal",
         }
     
     n = len(jobs)

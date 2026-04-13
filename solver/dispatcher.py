@@ -10,4 +10,4 @@ def solve_schedule(jobs, machines, solver="gurobi", use_lpt=False):
     elif solver == "ortools":
         return solve_ortools_makespan(jobs=jobs, machines=machines)
     else:
-        raise ValueError(f"Unknown solver: {solver}")
+        raise ValueError(f"Unsupported solver: {solver}")
